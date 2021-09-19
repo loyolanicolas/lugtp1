@@ -20,10 +20,19 @@ namespace Negocio_BLL
         {
             return o_MPP_Ejercicio.Borrar(oBEEjer);
         }
-
+        public bool Alta(BE_Ejercicio oBEEjer)
+        {
+            return o_MPP_Ejercicio.Alta(oBEEjer);
+        }
         public bool Guardar(BE_Ejercicio oBEEjer)
         {
+            //if(VerificaExistencia(oBEEjer))
             return o_MPP_Ejercicio.Guardar(oBEEjer);
+        }
+
+        private bool VerificaExistencia(BE_Ejercicio oBEEjer)
+        {
+            return o_MPP_Ejercicio.VerificaExistencia(oBEEjer);
         }
 
         public List<BE_Ejercicio> ListarTodos()

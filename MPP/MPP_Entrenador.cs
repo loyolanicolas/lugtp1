@@ -29,6 +29,7 @@ namespace MPP
             return dal.LeerScalar("select count(Entrenador_Legajo) from Deportista where Entrenador_Legajo =" + oBEEntrenador.Codigo + "");
         }
 
+
         public bool Guardar(BE_Entrenador oBEEntrenador)
         {
             //instancio un objeto de la clase datos para operar con la BD
@@ -39,7 +40,7 @@ namespace MPP
                 //Consulta_SQL = "Insert into Alumno (Nombre, Apellido,DNI, FechaNac,CodLocalidad) values('" + oBEAlu.Nombre + "', '" + oBEAlu.Apellido + "', " + oBEAlu.DNI + ",'" + (oBEAlu.FechaNac).ToString("MM/dd/yyyy") + "'," + oBEAlu.oBELocalidad.Codigo + ") ";
             //oDatos = new Acceso();
             return dal.Escribir(Consulta_SQL);
-            }
+        }
 
         public List<BE_Entrenador> ListarTodos()//LISTO
         {
@@ -60,6 +61,11 @@ namespace MPP
         }
 
         public BE_Entrenador ListarUno(BE_Entrenador Objeto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Alta(BE_Entrenador Objeto)
         {
             throw new NotImplementedException();
         }

@@ -45,5 +45,10 @@ namespace Negocio_BLL
         {
             return o_MPP_Entrenador.ListarUno(oBEEntr);
         }
+
+        public bool Alta(BE_Entrenador Objeto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

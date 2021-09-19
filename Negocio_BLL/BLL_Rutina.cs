@@ -16,6 +16,12 @@ namespace Negocio_BLL
         {
             o_MPP_Rutina = new MPP_Rutina();
         }
+
+        public bool Alta(BE_Rutina Objeto)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Borrar(BE_Rutina oBERut)
         {
             return o_MPP_Rutina.Borrar(oBERut);

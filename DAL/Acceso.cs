@@ -147,14 +147,14 @@ namespace DAL
         ////leo un escalar-
         public bool LeerScalar(string consulta)
         {
-            conexion.Open();
+            Abrir();
             //uso el constructor del objeto Command
             SqlCommand cmd = new SqlCommand(consulta, conexion);
             cmd.CommandType = CommandType.Text;
             try
             {
                 int Respuesta = Convert.ToInt32(cmd.ExecuteScalar());
-                conexion.Close();
+                Cerrar();
                 if (Respuesta > 0)
                 { return true; }
                 else

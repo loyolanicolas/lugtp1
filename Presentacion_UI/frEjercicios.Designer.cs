@@ -73,6 +73,7 @@ namespace Presentacion_UI
             this.btn_Alta_Ejer.TabIndex = 15;
             this.btn_Alta_Ejer.Text = "AGREGAR";
             this.btn_Alta_Ejer.UseVisualStyleBackColor = true;
+            this.btn_Alta_Ejer.Click += new System.EventHandler(this.btn_Alta_Ejer_Click);
             // 
             // btn_Mod_Ejer
             // 

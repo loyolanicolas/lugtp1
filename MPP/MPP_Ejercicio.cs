@@ -22,10 +22,34 @@ namespace MPP
         {
             throw new NotImplementedException();
         }
-
-        public bool Guardar(BE_Ejercicio Objeto)
+        public bool Alta(BE_Ejercicio oBEEjer)
         {
-            throw new NotImplementedException();
+            //instancio un objeto de la clase datos para operar con la BD
+            string Consulta_SQL = string.Empty;
+            //Consulta_SQL = "Update Entrenador SET Legajo = '" + oBEEntrenador.Codigo + "', Nombre = '" + oBEEntrenador.Nombre + "', Apellido = '" + oBEEntrenador.Apellido + "' where Legajo = '" + oBEEntrenador.Codigo + "'";
+            //else
+            Consulta_SQL = "Insert into Ejercicio (Id_ejercicio, Detalle) values('" + oBEEjer.Codigo + "', '" + oBEEjer.Detalle + ") ";
+            //oDatos = new Acceso();
+            return dal.Escribir(Consulta_SQL);
+        }
+
+        public bool Guardar(BE_Ejercicio oBEEjer)
+        {
+            //instancio un objeto de la clase datos para operar con la BD
+            string Consulta_SQL = string.Empty;
+            if (oBEEjer.Codigo != 0)
+                Consulta_SQL = "Update ejercicio SET Id_ejercicio = '" + oBEEjer.Codigo + "', Detalle = '" + oBEEjer.Detalle + "' where Id_ejercicio = '" + oBEEjer.Codigo + "'";
+            //else
+                //Consulta_SQL = "Insert into Alumno (Nombre, Apellido,DNI, FechaNac,CodLocalidad) values('" + oBEAlu.Nombre + "', '" + oBEAlu.Apellido + "', " + oBEAlu.DNI + ",'" + (oBEAlu.FechaNac).ToString("MM/dd/yyyy") + "'," + oBEAlu.oBELocalidad.Codigo + ") ";
+            //oDatos = new Acceso();
+            return dal.Escribir(Consulta_SQL);
+        }
+
+        public bool VerificaExistencia(BE_Ejercicio oBEEjer)
+        {
+            string Consulta_SQL = string.Empty;
+            Consulta_SQL = "Select count(Id_ejercicio) from Ejercicio where Id_ejercicio = " + oBEEjer.Codigo + "";
+            return dal.Escribir(Consulta_SQL);
         }
 
         public List<BE_Ejercicio> ListarTodos()

@@ -18,6 +18,12 @@ namespace MPP
         {
             dal = new Acceso();
         }
+
+        public bool Alta(BE_Deportista Objeto)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Borrar(BE_Deportista Objeto)
         {
             throw new NotImplementedException();

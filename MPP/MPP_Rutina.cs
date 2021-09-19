@@ -18,6 +18,12 @@ namespace MPP
         {
             dal = new Acceso();
         }
+
+        public bool Alta(BE_Rutina Objeto)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Borrar(BE_Rutina Objeto)
         {
             //if (Existe_Materia_Asociada(oBEMat) == false)

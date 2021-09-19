@@ -16,6 +16,12 @@ namespace Negocio_BLL
         {
             o_MPP_Deportista = new MPP_Deportista();
         }
+
+        public bool Alta(BE_Deportista Objeto)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Borrar(BE_Deportista oBEDepor)
         {
             return o_MPP_Deportista.Borrar(oBEDepor);

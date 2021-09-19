@@ -47,6 +47,21 @@ namespace Presentacion_UI
             try
             {
                 o_BE_Ejercicio.Detalle = texbox_Detalle_Ejer.Text;
+                o_BE_Ejercicio.Codigo = Convert.ToInt32(textBox1.Text);
+                //llamo al metodo guardar de la bll Entrenador y le paso la BE de Entrenador
+                o_BLL_Ejercicio.Guardar(o_BE_Ejercicio);
+                CargardataGridView1();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
+        private void btn_Alta_Ejer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                o_BE_Ejercicio.Detalle = texbox_Detalle_Ejer.Text;
+                o_BE_Ejercicio.Codigo = Convert.ToInt32(textBox1.Text);
                 //llamo al metodo guardar de la bll Entrenador y le paso la BE de Entrenador
                 o_BLL_Ejercicio.Guardar(o_BE_Ejercicio);
                 CargardataGridView1();
