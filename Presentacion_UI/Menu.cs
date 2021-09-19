@@ -49,5 +49,12 @@ namespace Presentacion_UI
             o_frRutina.MdiParent = this;
             o_frRutina.Show();
         }
+
+        private void ejerciciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frEjercicios o_frEjercicio = new frEjercicios();
+            o_frEjercicio.MdiParent = this;
+            o_frEjercicio.Show();
+        }
     }
 }

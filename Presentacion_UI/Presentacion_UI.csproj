@@ -52,6 +52,12 @@
     <Compile Include="frDeportista.Designer.cs">
       <DependentUpon>frDeportista.cs</DependentUpon>
     </Compile>
+    <Compile Include="frEjercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frEjercicios.Designer.cs">
+      <DependentUpon>frEjercicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frEntrenador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,8 +81,14 @@
     <EmbeddedResource Include="frDeportista.resx">
       <DependentUpon>frDeportista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frEjercicios.resx">
+      <DependentUpon>frEjercicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frEntrenador.resx">
       <DependentUpon>frEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRutinas.resx">
+      <DependentUpon>frRutinas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

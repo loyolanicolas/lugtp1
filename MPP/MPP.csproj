@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MPP_Deportista.cs" />
+    <Compile Include="MPP_Ejercicio.cs" />
     <Compile Include="MPP_Entrenador.cs" />
-    <Compile Include="MPP_Profesional.cs" />
     <Compile Include="MPP_Rutina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

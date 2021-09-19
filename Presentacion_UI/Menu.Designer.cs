@@ -36,6 +36,7 @@ namespace Presentacion_UI
             this.entrenadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deportistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rutinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ejerciciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@ namespace Presentacion_UI
             this.entrenadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.entrenadoresToolStripMenuItem1,
             this.deportistasToolStripMenuItem,
-            this.rutinaToolStripMenuItem});
+            this.rutinaToolStripMenuItem,
+            this.ejerciciosToolStripMenuItem});
             this.entrenadoresToolStripMenuItem.Name = "entrenadoresToolStripMenuItem";
             this.entrenadoresToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.entrenadoresToolStripMenuItem.Text = "Formularios";
@@ -95,6 +97,13 @@ namespace Presentacion_UI
             this.rutinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rutinaToolStripMenuItem.Text = "Rutinas";
             this.rutinaToolStripMenuItem.Click += new System.EventHandler(this.rutinaToolStripMenuItem_Click);
+            // 
+            // ejerciciosToolStripMenuItem
+            // 
+            this.ejerciciosToolStripMenuItem.Name = "ejerciciosToolStripMenuItem";
+            this.ejerciciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ejerciciosToolStripMenuItem.Text = "Ejercicios";
+            this.ejerciciosToolStripMenuItem.Click += new System.EventHandler(this.ejerciciosToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -123,6 +132,7 @@ namespace Presentacion_UI
         private System.Windows.Forms.ToolStripMenuItem entrenadoresToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem deportistasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rutinaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ejerciciosToolStripMenuItem;
     }
 }
 
