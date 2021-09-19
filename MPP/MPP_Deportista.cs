@@ -35,18 +35,18 @@ namespace MPP
             while (unDR.Read())
             {
                 BE_Deportista unDeportista;
-                int? auxDepor = Convert.ToInt32(unDR["Medallas"]);
-                if (auxDepor != null)
+                if (unDR["Medallas"] != null)
                     unDeportista = new BE_Profesional();
                 else
                     unDeportista = new BE_Aficionado();
-
-                (unDeportista as BE_Profesional).Medallas = 1;
-                //BE_Deportista unDeportista = new BE_Deportista();
-                //unDeportista.Codigo = Convert.ToInt32(unDR[0]);
-                //unDeportista.Nombre = unDR[1].ToString();
-                //unDeportista.Apellido = unDR[2].ToString();
-                //ListaDeportistas.Add(unDeportista);
+                //(unDeportista as BE_Profesional).Medallas = 1;
+                unDeportista.Codigo = Convert.ToInt32(unDR[0]);
+                unDeportista.Nombre = unDR[1].ToString();
+                unDeportista.Apellido = unDR[2].ToString();
+                unDeportista.FechaNac = Convert.ToDateTime(unDR[3]);
+                //if(unDeportista.GetType() == typeof(BE_Profesional))
+                //    (unDeportista as BE_Profesional).Medallas = Convert.ToInt32(unDR[5]);
+                ListaDeportistas.Add(unDeportista);
             }
             //Cierro la conexion del SqlDataReader
             unDR.Close();

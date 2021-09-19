@@ -169,7 +169,7 @@ namespace DAL
         public bool Escribir(string Consulta_SQL)
         {
 
-            conexion.Open();
+            Abrir();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conexion;
@@ -185,7 +185,7 @@ namespace DAL
             }
 
             finally
-            { conexion.Close(); }
+            { Cerrar(); }
         }
 
     }

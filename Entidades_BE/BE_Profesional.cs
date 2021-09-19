@@ -8,6 +8,6 @@ namespace Entidades_BE
 {
     public class BE_Profesional : BE_Deportista
     {
-        public int Medallas { get; set; }
+        public int? Medallas { get; set; }
     }
 }

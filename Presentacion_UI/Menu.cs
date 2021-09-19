@@ -35,5 +35,19 @@ namespace Presentacion_UI
             o_frEntrenador.MdiParent = this;
             o_frEntrenador.Show();
         }
+
+        private void deportistasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frDeportista o_frDeportista = new frDeportista();
+            o_frDeportista.MdiParent = this;
+            o_frDeportista.Show();
+        }
+
+        private void rutinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frRutinas o_frRutina = new frRutinas();
+            o_frRutina.MdiParent = this;
+            o_frRutina.Show();
+        }
     }
 }

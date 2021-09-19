@@ -58,6 +58,12 @@
     <Compile Include="frEntrenador.Designer.cs">
       <DependentUpon>frEntrenador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frRutinas.Designer.cs">
+      <DependentUpon>frRutinas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
