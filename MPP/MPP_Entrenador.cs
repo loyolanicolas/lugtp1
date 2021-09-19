@@ -23,10 +23,17 @@ namespace MPP
             throw new NotImplementedException();
         }
 
-        public bool Guardar(BE_Entrenador Objeto)
+        public bool Guardar(BE_Entrenador oBEEntrenador)
         {
-            throw new NotImplementedException();
-        }
+            //instancio un objeto de la clase datos para operar con la BD
+            string Consulta_SQL = string.Empty;
+            if (oBEEntrenador.Codigo != 0)
+                Consulta_SQL = "Update Entrenador SET Legajo = '" + oBEEntrenador.Codigo + "', Nombre = '" + oBEEntrenador.Nombre + "', Apellido = '" + oBEEntrenador.Apellido + " where codigo = " + oBEEntrenador.Codigo + "";
+            //else
+                //Consulta_SQL = "Insert into Alumno (Nombre, Apellido,DNI, FechaNac,CodLocalidad) values('" + oBEAlu.Nombre + "', '" + oBEAlu.Apellido + "', " + oBEAlu.DNI + ",'" + (oBEAlu.FechaNac).ToString("MM/dd/yyyy") + "'," + oBEAlu.oBELocalidad.Codigo + ") ";
+            //oDatos = new Acceso();
+            return dal.Escribir(Consulta_SQL);
+            }
 
         public List<BE_Entrenador> ListarTodos()
         {

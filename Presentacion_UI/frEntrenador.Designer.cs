@@ -35,7 +35,7 @@ namespace Presentacion_UI
             this.label3 = new System.Windows.Forms.Label();
             this.texbox_Nombre_Entrenador = new System.Windows.Forms.TextBox();
             this.textbox_Apellido_Entrenador = new System.Windows.Forms.TextBox();
-            this.textbox_DNI_Entrenador = new System.Windows.Forms.TextBox();
+            this.textbox_Legajo_Entrenador = new System.Windows.Forms.TextBox();
             this.btn_Agregar_Entrenador = new System.Windows.Forms.Button();
             this.btn_Borrar_Entrenador = new System.Windows.Forms.Button();
             this.btn_Modificar_Entrenador = new System.Windows.Forms.Button();
@@ -76,9 +76,9 @@ namespace Presentacion_UI
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "DNI";
+            this.label3.Text = "Legajo";
             // 
             // texbox_Nombre_Entrenador
             // 
@@ -94,12 +94,12 @@ namespace Presentacion_UI
             this.textbox_Apellido_Entrenador.Size = new System.Drawing.Size(100, 20);
             this.textbox_Apellido_Entrenador.TabIndex = 5;
             // 
-            // textbox_DNI_Entrenador
+            // textbox_Legajo_Entrenador
             // 
-            this.textbox_DNI_Entrenador.Location = new System.Drawing.Point(101, 128);
-            this.textbox_DNI_Entrenador.Name = "textbox_DNI_Entrenador";
-            this.textbox_DNI_Entrenador.Size = new System.Drawing.Size(100, 20);
-            this.textbox_DNI_Entrenador.TabIndex = 6;
+            this.textbox_Legajo_Entrenador.Location = new System.Drawing.Point(101, 128);
+            this.textbox_Legajo_Entrenador.Name = "textbox_Legajo_Entrenador";
+            this.textbox_Legajo_Entrenador.Size = new System.Drawing.Size(100, 20);
+            this.textbox_Legajo_Entrenador.TabIndex = 6;
             // 
             // btn_Agregar_Entrenador
             // 
@@ -156,7 +156,7 @@ namespace Presentacion_UI
             this.Controls.Add(this.btn_Modificar_Entrenador);
             this.Controls.Add(this.btn_Borrar_Entrenador);
             this.Controls.Add(this.btn_Agregar_Entrenador);
-            this.Controls.Add(this.textbox_DNI_Entrenador);
+            this.Controls.Add(this.textbox_Legajo_Entrenador);
             this.Controls.Add(this.textbox_Apellido_Entrenador);
             this.Controls.Add(this.texbox_Nombre_Entrenador);
             this.Controls.Add(this.label3);
@@ -181,7 +181,7 @@ namespace Presentacion_UI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox texbox_Nombre_Entrenador;
         private System.Windows.Forms.TextBox textbox_Apellido_Entrenador;
-        private System.Windows.Forms.TextBox textbox_DNI_Entrenador;
+        private System.Windows.Forms.TextBox textbox_Legajo_Entrenador;
         private System.Windows.Forms.Button btn_Agregar_Entrenador;
         private System.Windows.Forms.Button btn_Borrar_Entrenador;
         private System.Windows.Forms.Button btn_Modificar_Entrenador;

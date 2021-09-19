@@ -46,11 +46,11 @@ namespace Presentacion_UI
             {
                 o_BE_Entrenador.Nombre = texbox_Nombre_Entrenador.Text;
                 o_BE_Entrenador.Apellido = textbox_Apellido_Entrenador.Text;
-                //o_BE_Entrenador.DNI = Convert.ToInt32(textbox_DNI_Entrenador.Text);
-                //llamo al metodo guardar de la bll alumno y le paso la BE de alumno
-                //oBLLAlu.Guardar(oBEAlu);
-                //CargarGrilla();
-                //Limpiar();
+                o_BE_Entrenador.Codigo = Convert.ToInt32(textbox_Legajo_Entrenador.Text);
+                //llamo al metodo guardar de la bll Entrenador y le paso la BE de Entrenador
+                o_BLL_Entrenador.Guardar(o_BE_Entrenador);
+                CargardataGridView1();
+                //Limpiar(); REVISAR SI HAY QUE HACERLA
 
             }
             catch (Exception ex)
