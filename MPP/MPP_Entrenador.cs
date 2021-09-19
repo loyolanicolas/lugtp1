@@ -34,11 +34,7 @@ namespace MPP
         {
             //instancio un objeto de la clase datos para operar con la BD
             string Consulta_SQL = string.Empty;
-            if (oBEEntrenador.Codigo != 0)
-                Consulta_SQL = "Update Entrenador SET Legajo = '" + oBEEntrenador.Codigo + "', Nombre = '" + oBEEntrenador.Nombre + "', Apellido = '" + oBEEntrenador.Apellido + "' where Legajo = '" + oBEEntrenador.Codigo + "'";
-            //else
-                //Consulta_SQL = "Insert into Alumno (Nombre, Apellido,DNI, FechaNac,CodLocalidad) values('" + oBEAlu.Nombre + "', '" + oBEAlu.Apellido + "', " + oBEAlu.DNI + ",'" + (oBEAlu.FechaNac).ToString("MM/dd/yyyy") + "'," + oBEAlu.oBELocalidad.Codigo + ") ";
-            //oDatos = new Acceso();
+            Consulta_SQL = "Update Entrenador SET Legajo = '" + oBEEntrenador.Codigo + "', Nombre = '" + oBEEntrenador.Nombre + "', Apellido = '" + oBEEntrenador.Apellido + "' where Legajo = '" + oBEEntrenador.Codigo + "'";
             return dal.Escribir(Consulta_SQL);
         }
 
@@ -60,14 +56,21 @@ namespace MPP
             return ListaEntrenador;
         }
 
-        public BE_Entrenador ListarUno(BE_Entrenador Objeto)
+        public bool VerificaExistencia(BE_Entrenador oBEEntr)
+        {
+            return dal.LeerScalar("select count(Legajo) from Entrenador where Legajo =" + oBEEntr.Codigo + "");
+        }
+
+        public BE_Entrenador ListarUno(BE_Entrenador oBEEntr)
         {
             throw new NotImplementedException();
         }
 
-        public bool Alta(BE_Entrenador Objeto)
+        public bool Alta(BE_Entrenador oBEEntr)
         {
-            throw new NotImplementedException();
+            string ConsultaSQL = string.Empty;
+            ConsultaSQL = "insert into Entrenador values (" + oBEEntr.Codigo + ", '" + oBEEntr.Nombre + "', '" + oBEEntr.Apellido + "')";
+            return dal.Escribir(ConsultaSQL);
         }
     }
 }

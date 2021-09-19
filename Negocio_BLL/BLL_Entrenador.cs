@@ -33,7 +33,9 @@ namespace Negocio_BLL
 
         public bool Guardar(BE_Entrenador oBEEntr)
         {
-            return o_MPP_Entrenador.Guardar(oBEEntr);
+            if (oBEEntr.Codigo != 0)
+                return o_MPP_Entrenador.Guardar(oBEEntr);
+            return false;
         }
 
         public List<BE_Entrenador> ListarTodos()//LISTO
@@ -46,9 +48,17 @@ namespace Negocio_BLL
             return o_MPP_Entrenador.ListarUno(oBEEntr);
         }
 
-        public bool Alta(BE_Entrenador Objeto)
+        public bool Alta(BE_Entrenador oBEEntr)
         {
-            throw new NotImplementedException();
+            if (VerificaExistencia(oBEEntr) == false)
+                return o_MPP_Entrenador.Alta(oBEEntr);
+            return false;
         }
+
+        private bool VerificaExistencia(BE_Entrenador oBEEntr)
+        {
+            return o_MPP_Entrenador.VerificaExistencia(oBEEntr);
+        }
+
     }
 }
