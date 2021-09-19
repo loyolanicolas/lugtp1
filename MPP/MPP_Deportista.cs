@@ -34,6 +34,14 @@ namespace MPP
             SqlDataReader unDR = dal.ListarTodos("Select * from deportista");
             while (unDR.Read())
             {
+                BE_Deportista unDeportista;
+                int? auxDepor = Convert.ToInt32(unDR["Medallas"]);
+                if (auxDepor != null)
+                    unDeportista = new BE_Profesional();
+                else
+                    unDeportista = new BE_Aficionado();
+
+                (unDeportista as BE_Profesional).Medallas = 1;
                 //BE_Deportista unDeportista = new BE_Deportista();
                 //unDeportista.Codigo = Convert.ToInt32(unDR[0]);
                 //unDeportista.Nombre = unDR[1].ToString();
