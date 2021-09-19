@@ -57,6 +57,11 @@ namespace Presentacion_UI
             { MessageBox.Show(ex.Message); }
 
         }
-    
+
+        private void btn_Borrar_Entrenador_Click(object sender, EventArgs e)
+        {
+            o_BE_Entrenador = (BE_Entrenador)this.dataGridView1.CurrentRow.DataBoundItem;
+            o_BLL_Entrenador.Borrar(o_BE_Entrenador);
+        }
     }
 }

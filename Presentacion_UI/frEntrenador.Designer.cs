@@ -119,6 +119,7 @@ namespace Presentacion_UI
             this.btn_Borrar_Entrenador.TabIndex = 8;
             this.btn_Borrar_Entrenador.Text = "Borrar";
             this.btn_Borrar_Entrenador.UseVisualStyleBackColor = true;
+            this.btn_Borrar_Entrenador.Click += new System.EventHandler(this.btn_Borrar_Entrenador_Click);
             // 
             // btn_Modificar_Entrenador
             // 

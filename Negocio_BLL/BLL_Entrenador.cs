@@ -16,9 +16,19 @@ namespace Negocio_BLL
         {
             o_MPP_Entrenador = new MPP_Entrenador();
         }
-        public bool Borrar(BE_Entrenador oBEEntr)
+        public bool Borrar(BE_Entrenador oBEEntr)//LISTO
         {
-            return o_MPP_Entrenador.Borrar(oBEEntr);
+            if (TieneDeportistasAsociados(oBEEntr) == false)
+            {
+                return o_MPP_Entrenador.Borrar(oBEEntr);
+            }
+            else
+            { return false; }
+        }
+
+        private bool TieneDeportistasAsociados(BE_Entrenador oBEEntrenador)//LISTO
+        {
+            return o_MPP_Entrenador.TieneDeportistasAsociados(oBEEntrenador);
         }
 
         public bool Guardar(BE_Entrenador oBEEntr)
@@ -26,7 +36,7 @@ namespace Negocio_BLL
             return o_MPP_Entrenador.Guardar(oBEEntr);
         }
 
-        public List<BE_Entrenador> ListarTodos()
+        public List<BE_Entrenador> ListarTodos()//LISTO
         {
             return o_MPP_Entrenador.ListarTodos();
         }

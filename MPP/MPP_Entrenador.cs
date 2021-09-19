@@ -18,9 +18,15 @@ namespace MPP
         {
             dal = new Acceso();
         }
-        public bool Borrar(BE_Entrenador Objeto)
+        public bool Borrar(BE_Entrenador oBEEntrenador)//LISTO
         {
-            throw new NotImplementedException();
+            string Consulta_SQL = "DELETE FROM Entrenador where Legajo = " + oBEEntrenador.Codigo + "";
+            return dal.Escribir(Consulta_SQL);
+        }
+
+        public bool TieneDeportistasAsociados(BE_Entrenador oBEEntrenador)//LISTO
+        {
+            return dal.LeerScalar("select count(Entrenador_Legajo) from Deportista where Entrenador_Legajo =" + oBEEntrenador.Codigo + "");
         }
 
         public bool Guardar(BE_Entrenador oBEEntrenador)
@@ -35,7 +41,7 @@ namespace MPP
             return dal.Escribir(Consulta_SQL);
             }
 
-        public List<BE_Entrenador> ListarTodos()
+        public List<BE_Entrenador> ListarTodos()//LISTO
         {
             List<BE_Entrenador> ListaEntrenador = new List<BE_Entrenador>();
             SqlDataReader unDR = dal.ListarTodos("Select * from entrenador");
