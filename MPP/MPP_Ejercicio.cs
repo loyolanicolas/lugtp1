@@ -28,7 +28,7 @@ namespace MPP
             string Consulta_SQL = string.Empty;
             //Consulta_SQL = "Update Entrenador SET Legajo = '" + oBEEntrenador.Codigo + "', Nombre = '" + oBEEntrenador.Nombre + "', Apellido = '" + oBEEntrenador.Apellido + "' where Legajo = '" + oBEEntrenador.Codigo + "'";
             //else
-            Consulta_SQL = "Insert into Ejercicio (Id_ejercicio, Detalle) values('" + oBEEjer.Codigo + "', '" + oBEEjer.Detalle + ") ";
+            Consulta_SQL = "Insert into Ejercicio (Id_ejercicio, Detalle) values(" + oBEEjer.Codigo + ", '" + oBEEjer.Detalle + "') ";
             //oDatos = new Acceso();
             return dal.Escribir(Consulta_SQL);
         }

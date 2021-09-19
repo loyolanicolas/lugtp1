@@ -63,7 +63,7 @@ namespace Presentacion_UI
                 o_BE_Ejercicio.Detalle = texbox_Detalle_Ejer.Text;
                 o_BE_Ejercicio.Codigo = Convert.ToInt32(textBox1.Text);
                 //llamo al metodo guardar de la bll Entrenador y le paso la BE de Entrenador
-                o_BLL_Ejercicio.Guardar(o_BE_Ejercicio);
+                o_BLL_Ejercicio.Alta(o_BE_Ejercicio);
                 CargardataGridView1();
             }
             catch (Exception ex)
