@@ -44,6 +44,7 @@
     <Compile Include="BLL_Deportista.cs" />
     <Compile Include="BLL_Ejercicio.cs" />
     <Compile Include="BLL_Entrenador.cs" />
+    <Compile Include="BLL_Login.cs" />
     <Compile Include="BLL_Rutina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
