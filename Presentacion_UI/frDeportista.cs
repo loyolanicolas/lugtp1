@@ -36,5 +36,30 @@ namespace Presentacion_UI
             this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
         }
+
+        private void btn_Agregar_Entrenador_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Borrar_Entrenador_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Modificar_Entrenador_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Asociar_Entrenador_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

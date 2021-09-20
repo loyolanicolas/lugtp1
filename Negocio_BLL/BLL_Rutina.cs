@@ -17,14 +17,21 @@ namespace Negocio_BLL
             o_MPP_Rutina = new MPP_Rutina();
         }
 
-        public bool Alta(BE_Rutina Objeto)
+        public bool Alta(BE_Rutina oBERut)
         {
-            throw new NotImplementedException();
+            //if (VerificaExistencia(oBERut) == false)
+                return o_MPP_Rutina.Alta(oBERut);
+            //return false;
         }
 
         public bool Borrar(BE_Rutina oBERut)
         {
-            return o_MPP_Rutina.Borrar(oBERut);
+            //if (TieneEjerciciosAsociados(oBERut) == false)
+            //{
+                return o_MPP_Rutina.Borrar(oBERut);
+            //}
+            //else
+            //{ return false; }
         }
 
         public bool Guardar(BE_Rutina oBERut)
@@ -47,5 +54,9 @@ namespace Negocio_BLL
             return o_MPP_Rutina.Test();
         }
 
+        public void TraerEjercicios(BE_Rutina oBERut)
+        {
+            o_MPP_Rutina.TraerEjercicios(oBERut);
+        }
     }
 }

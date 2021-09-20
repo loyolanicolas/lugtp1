@@ -93,6 +93,7 @@ namespace Presentacion_UI
             this.btn_Baja_Ejer.TabIndex = 17;
             this.btn_Baja_Ejer.Text = "ELIMINAR";
             this.btn_Baja_Ejer.UseVisualStyleBackColor = true;
+            this.btn_Baja_Ejer.Click += new System.EventHandler(this.btn_Baja_Ejer_Click);
             // 
             // textBox1
             // 

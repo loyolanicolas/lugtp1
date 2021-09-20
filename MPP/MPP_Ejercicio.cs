@@ -18,9 +18,10 @@ namespace MPP
         {
             dal = new Acceso();
         }
-        public bool Borrar(BE_Ejercicio Objeto)
+        public bool Borrar(BE_Ejercicio oBEEjer)
         {
-            throw new NotImplementedException();
+            string Consulta_SQL = "DELETE FROM Ejercicio where Id_ejercicio = " + oBEEjer.Codigo + "";
+            return dal.Escribir(Consulta_SQL);
         }
         public bool Alta(BE_Ejercicio oBEEjer)
         {

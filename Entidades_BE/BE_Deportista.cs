@@ -14,5 +14,13 @@ namespace Entidades_BE
         public DateTime FechaNac { get; set; }
         public BE_Entrenador Entrenador { get; set; }
         #endregion
+        public override string ToString()
+        {
+            if (!string.IsNullOrEmpty(this.Apellido))
+            {
+                return this.Apellido.ToString();
+            }
+            return "";
+        }
     }
 }

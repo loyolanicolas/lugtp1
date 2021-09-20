@@ -39,7 +39,9 @@ namespace Presentacion_UI
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            o_BE_Ejercicio = (BE_Ejercicio)this.dataGridView1.CurrentRow.DataBoundItem;
+            texbox_Detalle_Ejer.Text = o_BE_Ejercicio.Detalle;
+            textBox1.Text = o_BE_Ejercicio.Codigo.ToString();
         }
 
         private void btn_Mod_Ejer_Click(object sender, EventArgs e)
@@ -65,9 +67,22 @@ namespace Presentacion_UI
                 //llamo al metodo guardar de la bll Entrenador y le paso la BE de Entrenador
                 o_BLL_Ejercicio.Alta(o_BE_Ejercicio);
                 CargardataGridView1();
+
+                //if (o_BLL_Ejercicio.Alta(o_BE_Ejercicio) == false)
+                //    MessageBox.Show("Ya existe un Ejercicio con ID Nro: " + o_BE_Ejercicio.Codigo);
+
+                //Limpiar(); REVISAR SI HAY QUE HACERLA
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+        }
+
+        private void btn_Baja_Ejer_Click(object sender, EventArgs e)
+        {
+            o_BE_Ejercicio = (BE_Ejercicio)this.dataGridView1.CurrentRow.DataBoundItem;
+            if (o_BLL_Ejercicio.Borrar(o_BE_Ejercicio) == false)
+                MessageBox.Show("El Ejercicio " + o_BE_Ejercicio.Detalle + " tiene Rutinas asociadas");
+            CargardataGridView1();
         }
     }
 }

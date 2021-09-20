@@ -56,6 +56,7 @@ namespace Presentacion_UI
             this.btn_Modificar_Entrenador.TabIndex = 18;
             this.btn_Modificar_Entrenador.Text = "Modificar";
             this.btn_Modificar_Entrenador.UseVisualStyleBackColor = true;
+            this.btn_Modificar_Entrenador.Click += new System.EventHandler(this.btn_Modificar_Entrenador_Click);
             // 
             // btn_Borrar_Entrenador
             // 
@@ -65,6 +66,7 @@ namespace Presentacion_UI
             this.btn_Borrar_Entrenador.TabIndex = 17;
             this.btn_Borrar_Entrenador.Text = "Borrar";
             this.btn_Borrar_Entrenador.UseVisualStyleBackColor = true;
+            this.btn_Borrar_Entrenador.Click += new System.EventHandler(this.btn_Borrar_Entrenador_Click);
             // 
             // btn_Agregar_Entrenador
             // 
@@ -74,6 +76,7 @@ namespace Presentacion_UI
             this.btn_Agregar_Entrenador.TabIndex = 16;
             this.btn_Agregar_Entrenador.Text = "Agregar";
             this.btn_Agregar_Entrenador.UseVisualStyleBackColor = true;
+            this.btn_Agregar_Entrenador.Click += new System.EventHandler(this.btn_Agregar_Entrenador_Click);
             // 
             // textbox_Apellido_Deportista
             // 
@@ -166,6 +169,7 @@ namespace Presentacion_UI
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(368, 254);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // comboBox2
             // 
@@ -183,6 +187,7 @@ namespace Presentacion_UI
             this.btn_Asociar_Entrenador.TabIndex = 27;
             this.btn_Asociar_Entrenador.Text = "Asignar Entrenador";
             this.btn_Asociar_Entrenador.UseVisualStyleBackColor = true;
+            this.btn_Asociar_Entrenador.Click += new System.EventHandler(this.btn_Asociar_Entrenador_Click);
             // 
             // frDeportista
             // 
